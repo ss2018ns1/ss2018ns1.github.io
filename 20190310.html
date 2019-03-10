@@ -1,0 +1,37 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Title</title>
+	<style>
+		body{
+			background-color:black;
+			color:white;
+			font-family: Consolas;
+		}
+		p{
+			font-size:50px;
+		}
+	</style>
+</head>
+
+<body>
+	<h1>Public Account Interact Test</h1>
+	<p>
+		The webpage has <span id = "time">0</span> errors.
+	</p>
+	<p style = "color:red" id = "error">
+		
+	</p>
+	<script>
+		var timeEl = document.getElementById("time");
+		var errorEl = document.getElementById("error");
+		var timeValue = 0;
+		function addTime(){
+			timeEl.textContent = parseFloat(timeEl.textContent)+1;
+			errorEl.innerHTML+="[ERROR] f**king_machineEl not declared in this scope<br>";
+		}
+		window.setInterval(addTime,1);
+	</script>
+</body>
+</html>
